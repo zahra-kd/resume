@@ -9,17 +9,16 @@
 #container {
     margin: 20px auto !important;
     width: 70%;
-    margin: auto;
     display: flex;
     border-radius: 10px;
     box-shadow: 0 0 10px rgb(167, 163, 171);
     transition: transform 0.5s;
 }
 #container:hover {
-    transform: scale(1.1);
+    transform: scale(1.02);
 }
 #left_side {
-    width: 42%;
+    width: 43%;
     background-color: rgba(216, 216, 216, 0.607);
     padding: 4px;
     border-left: 30px solid rgb(64, 34, 92) ;
@@ -27,7 +26,7 @@
 }
 #left_side h1, #left_side h2, h3 {
     color:rgb(64, 34, 92);
-    margin-bottom: 8px;
+    margin-bottom: 6px;
 }
 #left_side h2{
     font-weight:400
@@ -54,15 +53,14 @@ h3{
 }
 /*-----.box .box:hover styling is commun to all the blocks of the resume for both sides----*/
 .box{
-    margin: 10px 0px;
-    line-height: 1.5;
-    padding: 10px;
-    transition: transform 0.5s;
+    line-height: 1.3;
+    padding: 8px 10px;
+    transition: 0.5s;
 }
 .box:hover {
     box-shadow: 0 0 10px rgb(167, 163, 171);
     border-radius: 5px;
-    transform: scale(1.01);
+    padding: 20px 10px;
 }
 .ul {
     margin-left: -18px;
@@ -88,7 +86,7 @@ the blocks and most of them have lists. Therefore, last child selector isn't rec
     color: black; 
 }
 #right_side {
-    width: 57%;
+    width: 56%;
     padding: 4px;
 }
 .box p:nth-of-type(2){
@@ -97,6 +95,7 @@ the blocks and most of them have lists. Therefore, last child selector isn't rec
 .box_container {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 5px;
 }
 .box_date {
     width: 25%;
@@ -112,4 +111,23 @@ the blocks and most of them have lists. Therefore, last child selector isn't rec
 .box_content li{
     list-style:disc;
 }
-
+@media print {
+    #container{
+        width:100%;
+        box-shadow: none;
+        border: 1px solid rgb(64, 34, 92);
+    }
+    h1{
+        font-size: 25px;
+    }
+    .box{
+        padding: 20px 10px;
+    }
+    .box li{
+        padding-bottom: 10px;
+    }
+    #left_side{
+        border-left: none;
+    }
+    
+}
